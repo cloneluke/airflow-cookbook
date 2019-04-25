@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ENV['SLUGIFY_USES_TEXT_UNIDECODE'] = 'yes'
+
 python_runtime node["airflow"]["python_runtime"] do
   version node["airflow"]["python_version"]
   provider :system
